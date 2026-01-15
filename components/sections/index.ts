@@ -1,0 +1,6 @@
+export { default as AboutSection } from './AboutSection'
+export { default as ContactSection } from './ContactSection'
+export { default as EventsSection } from './EventsSection'
+export { default as HeroSection } from './HeroSection'
+export { default as LiveSetsSection } from './LiveSetsSection'
+export { default as ReleasesSection } from './ReleasesSection'

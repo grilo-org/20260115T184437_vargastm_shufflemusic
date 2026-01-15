@@ -1,0 +1,64 @@
+/* Vinyl album effect */
+.album-container {
+  position: relative;
+  overflow: visible;
+}
+
+.vinyl-disc {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Only slide out vinyl when album is opened (after click animation) */
+.album-container.album-opened .vinyl-disc {
+  transform: translateX(120%);
+}
+
+.album-cover {
+  position: relative;
+  z-index: 10;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+/* Vinyl spinning animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Pulse bar animation for audio visualizer */
+@keyframes pulse-bar {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scaleY(1.5);
+    opacity: 1;
+  }
+}
+
+.animate-pulse-bar {
+  animation: pulse-bar 1s ease-in-out infinite;
+  transform-origin: bottom;
+}
